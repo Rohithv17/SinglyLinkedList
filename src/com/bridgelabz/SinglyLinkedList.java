@@ -19,6 +19,18 @@ public class SinglyLinkedList {
             size=size+1;
         }
 
+        public void insertAtLast(int value){  //To insert elements to the right (Last)
+            MyNode n= new MyNode(value);
+            if(tail==null){
+                tail=n;
+                head=n;
+            }
+            else {
+                tail.next = n;
+                tail = n;
+            }
+        }
+
         public void display(){      //To display the elements inserted in the list
             MyNode temp=head;
             while(temp!=null){
