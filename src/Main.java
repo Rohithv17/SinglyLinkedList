@@ -3,9 +3,10 @@ import com.bridgelabz.SinglyLinkedList;
 public class Main {
     public static void main(String[] args) {
         SinglyLinkedList l = new SinglyLinkedList();
-        l.insertAtLast(56); //appending elements to 56 in thr order 56->30->70
-        l.insertAtLast(30);
+        l.insertAtLast(56); //appending elements
         l.insertAtLast(70);
+        l.insertBetween(30); //inserts 30 in between 56 and 70
+
 
 
 

@@ -31,6 +31,12 @@ public class SinglyLinkedList {
             }
         }
 
+        public void insertBetween(int value){   //Inserts elements between two nodes 
+            MyNode n= new MyNode(value);
+            head.next=n;
+            n.next=tail;
+        }
+
         public void display(){      //To display the elements inserted in the list
             MyNode temp=head;
             while(temp!=null){
