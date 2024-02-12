@@ -19,6 +19,32 @@ public class SinglyLinkedList {
             size=size+1;
         }
 
+        public void insertAtLast(int value){  //To insert elements to the right (Last)
+            MyNode n= new MyNode(value);
+            if(tail==null){
+                tail=n;
+                head=n;
+            }
+            else {
+                tail.next = n;
+                tail = n;
+            }
+        }
+
+        public void insertBetween(int value){   //Inserts elements between two nodes 
+            MyNode n= new MyNode(value);
+            head.next=n;
+            n.next=tail;
+        }
+        public void deleteFirst(){   // function to delete element at first position
+            int value=head.value;
+            head=head.next;
+            if(head==null){
+                tail=null;
+            }
+            size--;
+        }
+
         public void display(){      //To display the elements inserted in the list
             MyNode temp=head;
             while(temp!=null){
