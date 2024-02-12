@@ -36,6 +36,14 @@ public class SinglyLinkedList {
             head.next=n;
             n.next=tail;
         }
+        public void deleteFirst(){   // function to delete element at first position
+            int value=head.value;
+            head=head.next;
+            if(head==null){
+                tail=null;
+            }
+            size--;
+        }
 
         public void display(){      //To display the elements inserted in the list
             MyNode temp=head;
